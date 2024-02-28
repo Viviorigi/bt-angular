@@ -1,0 +1,60 @@
+<div class="section">
+    <div class="banner">
+        <h2 class="text-center  p-5 text-uppercase">tạo Tài khoản</h2>
+    </div>
+</div>
+<!-- end-banner -->
+<main>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="title">
+                    <h3>Tạo tài khoản</h3>
+                </div>
+                <div class="form">
+                    <form action="" [formGroup]="accForm" (submit)="Submit()" >
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control1" name="" id="pass" aria-describedby="helpId" placeholder="Tên của bạn" formControlName="name">
+                            <div *ngIf="accForm['controls']['name'].dirty &&accForm['controls']['name'].errors">
+                              <h4 class="err" *ngIf="accForm['controls']['name'].errors['required']">Tên không để trống</h4>
+                              <h4 class="err" *ngIf="accForm['controls']['name'].errors['minlength']">tên tối thiểu 2 kí tự</h4> 
+                            </div>
+                          </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control form-control1" name="" id="em" aria-describedby="helpId" placeholder="Email" formControlName="email">                      
+                          <div *ngIf="accForm['controls']['email'].dirty && accForm['controls']['email'].errors">
+                            <h4 class="err" *ngIf="accForm['controls']['email'].errors['required']">email không được để trống</h4>
+                            <h4 class="err" *ngIf="accForm['controls']['email'].errors['minlength']">email tối thiểu 3 kí tự</h4> 
+                            <h4 class="err" *ngIf="accForm['controls']['email'].errors['email']">email chưa đúng định dạng ex:(name@gmail.com)</h4>
+                            <h4 class="err" *ngIf="accForm['controls']['email'].errors['maxlength']">email tối đa 30 kí tự </h4>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control form-control1" name="" id="pass" aria-describedby="helpId" placeholder="Mật khẩu" formControlName="password">
+                          <div *ngIf="accForm['controls']['password'].dirty &&accForm['controls']['password'].errors">
+                            <h4 class="err" *ngIf="accForm['controls']['password'].errors['required']">Mật khẩu không để trống</h4>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control1" name="" id="pass1" aria-describedby="helpId" placeholder="Nhập lại mật khẩu" formControlName="repassword">
+                            <h4 class="err" *ngIf="accForm.errors?.['passwordmatcherror']" >Mật khẩu không khớp </h4>
+                            <div *ngIf="accForm['controls']['repassword'].dirty &&accForm['controls']['repassword'].errors">
+                                <h4 class="err" *ngIf="accForm['controls']['repassword'].errors['required']">Mật khẩu không để trống</h4>                        
+                            </div>
+                          </div>
+                        <div class="form-group2 pb-3">
+                            <button type="submit" class="btn" [disabled]="accForm.invalid">Đăng Ký</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="back">
+                    <a routerLink="/">Trở về</a>
+                    <br>
+                    <br>
+                    <a routerLink="/login-customer">Đăng nhập</a>
+                </div>
+            
+               </div>
+            </div>
+        </div>
+</main>

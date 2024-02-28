@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="cake text-center pt-5 text-uppercase pb-5">
+        <h4>{{nameCate.name}}</h4>
+        <img src="../../../assets/image/home_line_collection1.webp" alt="">
+    </div>
+    <div class="row">
+   <div class="col-lg-3">
+    <ul class="list-group">
+        <li class="list-group-item active text-center titleli" routerLink="/">Product</li>
+        <li class="list-group-item text-center titleli2" *ngFor="let item of listCate" [routerLink]="['/banh-sinh-nhat',item.id]">{{item.name}}</li>
+    </ul>
+   </div>
+   <div class="col-lg-9">
+        <div class="row">
+            <div class="col-lg-4 pb-4 col-md-4 " *ngFor="let item of listPro">    
+                <div class="card">
+                <a [routerLink]="['/about-product',item.id]" ><img class="card-img-top w-100" [src]="item.image" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title text-uppercase">{{item.name}}</h4>
+                    <p class="card-text">{{item.price|currency:"":"":"1.0-2"}}₫</p>
+                    <a [routerLink]="['/about-product',item.id]"><fa-icon [icon]="fashop"></fa-icon></a>          
+                </div>
+        </div>
+        </div>
+   </div>
+   <div class="more d-flex justify-content-center">
+    <div class="text-more "><a routerLink="/">Xem thêm</a></div>
+</div>
+</div>  

@@ -1,0 +1,89 @@
+.cake h4{
+    color: #3d1a1a;
+    font-size: 24px;
+}
+.card-body{
+    position: relative;
+    text-align: center;
+}
+.card-body h4{
+    font-size: 16px;
+    margin-bottom: 38px;
+}
+.card-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #c0c906;
+    width: 45%;
+    height: 35px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+.card-body a {
+    background-color: #3d1a1a;
+    color: #fff;
+    position: absolute;
+    left: 46%;
+    bottom: 16px;
+    line-height: 35px;
+    width: 34px;
+    height: 35px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.card img{
+    vertical-align: middle;
+    overflow: hidden;
+    width: 100%;
+}
+.card:hover{
+    color: #c0c906;
+    overflow: hidden;
+}
+.card img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.titleli{
+    color: #fff!important;
+    background-color: #3d1a1a;
+}
+.titleli2{
+    color: #3d1a1a !important;
+}
+.titleli2:hover{
+    background-color: #c0c906;
+    color: #3d1a1a;
+}
+.more{
+    margin:  0 auto;
+}
+.text-more{
+    text-align: center;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 6px;
+    background-color: #3d1a1a;
+    text-transform: uppercase;
+    margin: 40px;
+}
+.cake1{
+    margin: 0 auto;
+}
+.text-more a{
+    color: white;
+    font-weight: bold;
+   
+}
+.text-more:hover {
+    background-color: #c0c906;
+}

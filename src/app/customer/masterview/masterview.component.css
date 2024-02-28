@@ -1,0 +1,182 @@
+.navbar{
+    background-color: rgba(74, 29, 34, 0.9);
+    
+}
+main{
+    background-color: #f8f2e8;
+}
+.text-size{
+    font-size: 24px;
+    margin: 20px;
+    font-weight: bold;
+}
+.text-size:hover{
+    color: #c0c906;
+    text-decoration: dashed;
+}
+.title-blog{
+    margin-top: 60px;
+}
+.title-blog h1{
+    color: #c0c906;
+}
+.pa1{
+    font-size: 13px;
+    text-align: justify;
+}
+
+.item h4{
+    font-size: 20px;
+}
+.item{
+    margin: 15px;
+}
+.order{
+    content: "";
+    height: 700px;
+    width: 100%;
+    background-image: url(../../../assets/image/banform.webp);
+}
+.title-form{
+    margin: 25px;
+    color: #c0c906;
+}
+.form-group label{
+    color: #fff !important;
+}
+.form-order{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    margin-top: 55px;
+}
+.form-order button{
+    display: flex;
+    background-color: #3d1a1a !important;
+}
+.btn{
+    margin: 0 auto;
+    background-color: #3d1a1a !important;
+    border: 2px solid #3d1a1a;
+}
+.form-order button:hover{
+    background: #c0c906 !important;
+    border: 2px solid #c0c906;
+}
+.title-blog{
+    margin-top: 60px;
+}
+.title-blog h1{
+    color: #c0c906;
+}
+.desc-cake{
+    margin-top: 50px;
+}
+.desc{
+    height: 500px;
+}
+.desc img{
+    border-radius: 15px;
+    height: 360px;
+}
+.read-more{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #3d1a1a;
+    border-radius: 7px;
+    margin: 0 auto;
+    text-align: center;
+}
+.read-more a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.read-more:hover {
+    background-color: #c0c906;
+}
+footer{
+    position: relative;
+    background: url(../../../assets/image/footer-bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer{
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.footer{
+    position: relative;
+}
+.footer-contact img{
+    width: 150px;
+    margin-left: 50px;
+}
+footer,footer a{
+    color: #fff;
+}
+.footer{
+    padding-top: 20px;
+}
+.address{
+    height: 50px;
+}
+.footer-policy{
+    margin-top: 10px;
+}
+.footer-policy li{
+    list-style: none;
+    margin-bottom: 8px;
+}
+.footer a:hover {
+    color: #c0c906;
+}
+.name{
+    margin-top: 10px;
+}
+.name a{
+    font-size: 26px;
+    padding-right: 15px;
+}
+.sub{
+    margin-top: 10px;
+}
+.form-group1 input{
+    border-radius: none ;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+}
+.form-group1 button{
+    background: none;
+    border: none;
+}
+.form-group1 i{
+    color: #fff;
+    background-color: none;
+}
+.sub p{
+    font-weight: bold;
+    font-size: 16px;
+}
+.bot-footer{
+    background-color: #3d1a1a;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.bot-footer a{
+    color: #fff;
+}
+.bot-footer a:hover{
+    color: #c0c906;
+}

@@ -1,0 +1,143 @@
+<main>
+<nav class="navbar navbar-expand-sm navbar-light ">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/"><img src="../../../assets/image/logo.webp" alt=""></a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+            <li class="nav-item active ">
+                <a class="nav-link text-white text-size" routerLink="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white text-size"  routerLink="/">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white text-size" routerLink="/">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white text-size" routerLink="/">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white text-size" routerLink="/">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white text-size" routerLink="/cart">Cart({{cartItems}})</a>
+            </li>
+            <li class="nav-item dropdown ml-5">
+                <a class="nav-link dropdown-toggle text-white text-size"  id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="acc">Xin chào {{customer}}</a>
+                <a class="nav-link dropdown-toggle text-white text-size"  id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="!acc">Tài khoản</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" routerLink="/login-customer" *ngIf="!acc">Đăng nhập</a>
+                    <a class="dropdown-item" routerLink="/register" *ngIf="!acc">Đăng ký</a>
+                    <a class="dropdown-item" *ngIf="acc" (click)="logout()"  routerLink="/" >Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<div class="order w-100 container-fluid">
+    <!-- <img src="image/banform.webp" alt="" class="w-100 h-100"> -->
+    <div class="container">
+        <div class="row ">          
+            <div class="col-lg-5 form-order">
+                <div class="title-form text-center">
+                    <h2>ĐẶT ONLINE NGAY!</h2>
+                    <h4 class="text-white">KHÔNG CÒN PHẢI CHỜ ĐỢI NỮA</h4>
+                </div>
+             
+                <form action="" method="get">
+                    <div class="form-group">
+                        <label for="my-input">Họ tên của bạn</label>
+                        <input id="my-input" class="form-control" type="text" name="" placeholder="Họ tên của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="my-input">Địa chỉ email của bạn</label>
+                        <input id="my-input" class="form-control" type="email" name="" placeholder="Địa chỉ email của bạn">
+                    </div>
+                    <div class="form-group">
+                        <label for="my-input">Số điện thoại của bạn</label>
+                        <input id="my-input" class="form-control" type="text" name="" placeholder="Số điện thoại của bạn">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Nội dung</label>
+                      <textarea class="form-control" name="" id="" rows="4" placeholder="Nội dung"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary text-center font-weight-bold text-uppercase">Đặt ngay</button>
+                </form>
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="title-blog text-center font-weight-bold">
+    <h1>VỀ CHÚNG TÔI</h1>
+    <h5>CHÀO MỪNG BẠN ĐẾN ANHHOA BAKERY</h5>
+</div>
+<div class="container">
+    <div class="row desc-cake pb-4">
+        <div class="col-lg-6 desc">
+            <img src="../../../assets/image/tholambanh.png" alt="" class="w-100" >
+        </div>
+        <div class="col-lg-6">
+            <p>Anh Hòa Bakery là thương hiệu bánh ngọt Pháp của công ty cổ phần bánh ngọt Anh Hòa. 
+                Được thành lập từ năm 2004 tại con phố Ngõ Trạm, quận Hoàn Kiếm, Hà Nội. Trải qua hơn 15 năm phát triển, 
+                đến nay Anh Hòa Bakery đã có 13 cơ sở kinh doanh đặt trên những tuyến phố đông dân cư ở Hà Nội.
+                Các sản phẩm Anh Hòa Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
+                Newzeland, Mỹ, Pháp, Bỉ. Với hương vị thơm ngon đặc trưng của các loại kem, bơ, sữa, phô mai, hạt hạnh nhân, chocolate... dưới bàn tay khéo léo của những người thợ làm bánh giàu kinh nghiệm. Quy mô xưởng sản xuất rộng hơn 2000m2 với các thiết bị tiên tiến hiện đại theo tiêu chuẩn ISO 2018, toàn bộ nhà máy được sơn phủ bởi sơn EPOXY đặc biệt. Anh Hòa Bakery luôn mang đến cho khách hàng những sản phẩm chất lượng nhất, đảm bảo tuyệt đối về an toàn vệ sinh thực phẩm.</p>
+            <div class="read-more "><a href="">Đọc thêm</a> </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row  footer1">
+                <div class="col-lg-3 footer-contact p-2">
+                    <img src="../../../assets/image/logo.webp" alt="">
+                    <div class="address"><p><span><i class="fa-solid fa-house"></i></span> Số 09 Trần Thái Tông, P. Dịch Vọng, Q. Cầu Giấy, TP. Hà Nội</p></div>
+                    <a routerLink="/"><span><i class="fa-solid fa-mobile-screen"></i></span> 0961452578</a>
+                    <div class="mail">
+                        <a routerLink="/"><span><i class="fa-solid fa-envelope"></i></span> info@anhhoabakery.vn</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 footer-policy">
+                    <h4>CHÍNH SÁCH</h4>
+                    <ul>
+                        <li><a routerLink="/">Chính sách và quy định chung</a></li>
+                        <li><a routerLink="/">Chính sách giao dịch, thanh toán</a></li>
+                        <li><a routerLink="/">Chính sách đổi trả</a></li>
+                        <li><a routerLink="/">Chính sách bảo mật</a></li>
+                        <li><a routerLink="/">Chính sách vận chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 name">
+                    <h4>ANH HÒA BAKERY</h4>
+                    <p>Tên đơn vị: Công ty Cổ phần Bánh ngọt Anh Hòa Số giấy chứng nhận đăng ký kinh doanh: 0104802706 Ngày cấp: 21/07/2010 Nơi cấp: Sở Kế hoạch và Đầu tư Tp. Hà Nội</p>
+                    <div class="form-group1">
+                        <input type="email" aria-describedby="helpId" placeholder="nhập email của bạn ...">
+                        <button type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+                    </div>
+                </div>
+                <div class="col-lg-3 sub">
+                    <p >MỖI THÁNG CHÚNG TÔI ĐỀU CÓ NHỮNG ĐỢT GIẢM GIÁ DỊCH VỤ VÀ SẢN PHẨM NHẰM TRI ÂN KHÁCH HÀNG. ĐỂ CÓ THỂ CẬP NHẬT KỊP THỜI NHỮNG ĐỢT GIẢM GIÁ NÀY, VUI LÒNG NHẬP ĐỊA CHỈ EMAIL CỦA BẠN VÀO Ô DƯỚI ĐÂY</p>
+                    <img src="../../../assets/image/hg_img_thumb1.webp" alt="">
+                </div>
+        </div>
+        </div>
+    </div>
+</footer>
+<div class="bot-footer">
+    <a routerLink="/">Copyrights © 2018 by Anhhoa Bakery.</a>
+</div>
+
+</main>

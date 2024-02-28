@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-color text-white">  
+    <div class="container">
+     <div class="collapse navbar-collapse" id="collapsibleNavId">
+         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+             <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xin chào {{acc}}</a>
+                 <div class="dropdown-menu" aria-labelledby="dropdownId">
+                     <a class="dropdown-item" (click)="logout()">Đăng xuất</a>                   
+                 </div>
+             </li>
+         </ul>
+     </div>
+    </div>
+ </nav>
+ <div class="container-fluid">
+     <div class="row">
+         <div class="col-lg-2 ">
+             <div class="list-group text-center text-white mt-2">
+                 <a routerLink="../admin" class="list-group-item list-group-item-action active">Admin</a>
+                 <a routerLink="category" class="list-group-item list-group-item-action">Quản lý danh mục</a>
+                 <a routerLink="product" class="list-group-item list-group-item-action">Quản lý sản phẩm</a>
+                 
+             </div>
+         </div>
+         <div class="col-lg-10"> 
+           <router-outlet></router-outlet>
+         </div>
+     </div>
+ </div>

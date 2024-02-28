@@ -1,0 +1,66 @@
+<div class="section">
+    <div class="banner">
+        <h2 class="text-center  p-5">{{listPro.name}}</h2>
+    </div>
+</div>
+
+<div class="main">
+<div class="product container pb-5">
+    <div class="row" id="img-container">
+        <div class="col-lg-4 img-cake">
+            <img [src]="listPro.image" alt="" class="w-100">
+        </div>
+        <div class="col-lg-8">
+            <div class="product-content">
+                <h4>{{listPro.name}}</h4>
+                
+                <div class="price mt-5">
+                    <p>Giá <span> {{listPro.price|currency:"":"":"1.0-2"}}₫</span>/</p>                 
+                </div>
+
+                <div class="num">
+                   
+                </div>
+                <div class="add">
+                   <button (click)="addToCart()"> <a >Thêm vào giỏ hàng</a></button>
+                   <button class="btn1"> <a >Mua ngay</a></button>
+                </div>
+                <div class="quantity-group">
+                    <button (click)="handleQuantity('min')">-</button>
+                    <input type="text" value="{{productQuantity}}">
+                    <button (click)="handleQuantity('plus')">+</button>
+                </div>
+            </div>  
+        </div>
+        <div class="img-mini mt-3">
+            <img [src]="listPro.image" alt="" class="w-100">
+        </div>
+        <div class="img-mini mt-3">
+            <img [src]="listPro.image" alt="" class="w-100">
+        </div>
+        <div class="img-mini mt-3">
+            <img [src]="listPro.image" alt="" class="w-100">
+        </div>
+    </div>
+    <div class="desc mt-5">
+        <div class="desc-main">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active desc1 " id="home-tab" data-toggle="tab"  role="tab" aria-controls="home" aria-selected="true">Mô tả</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <ul>
+                        <li>- GATO </li>
+                        <li>-  CARAMEL SOCOLA </li>
+                        <li>BÁNH ĐƯỢC LÀM TỪ 3 LỚP GATO KẾT HỢP VỚI LỚP CREAM CHEESE, CHANH LEO và CHOCOLATE . PHỦ MẶT BÁNH 1 LỚP SỐT CARAMEL VÀ TRANG TRÍ HOA QUẢ.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+              </div>
+            
+        </div>
+        
+    </div>
+</div>

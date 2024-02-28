@@ -1,0 +1,32 @@
+<div class="jumbotron bg-color1">
+    <h1 class="display-3 title">Trang Thêm mới Sản Phẩm</h1>
+   </div>
+
+   <div class="row">
+    <div class="col-lg-6">
+            <h1 class="title">Thêm Mới Sản Phẩm</h1>
+            <form [formGroup]="formPro" (submit)="addProduct()">
+                <div class="form-group" >
+                  <h3 class="title1">Tên Sản Phẩm</h3>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name" placeholder="Sản phẩm cần thêm mới">
+                </div>
+                <div class="form-group">
+                    <h3 class="title1">Giá Sản Phẩm</h3>
+                    <input type="text" class="form-control" id="exampleInputEmail1" formControlName="price" placeholder="Giá sản phẩm cần thêm mới">
+                  </div>
+                   <div class="form-group">
+                     <h3 for="">Chọn danh mục</h3>
+                     <select class="form-control" name="category_id" id="" formControlName="category_id">
+                       
+                       <option *ngFor="let item of listCate" value="{{item.id}}">{{item.name}}</option>
+                     </select>
+                   </div>
+                   <div class="form-group">
+                    <h3 class="title1">Ảnh</h3>
+                    <input type="file" class="form-control" id="exampleInputEmail1"  (change)="selectFile($event)" enctype="multipart/form-data">
+                    <img [src]="preview" class="w-50">
+                  </div>
+                <button type="submit" class="btn btn-primary d-flex">Thêm mới</button>
+            </form>
+    </div>
+   </div>
